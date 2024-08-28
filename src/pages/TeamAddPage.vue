@@ -127,7 +127,4 @@ const minDate = new Date();
 </template>
 
 <style scoped>
-#teamPage {
-  width: 100%;
-}
 </style>
