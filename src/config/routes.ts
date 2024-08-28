@@ -11,6 +11,7 @@ import UserUpdatePage from "../pages/UserUpdatePage.vue";
 import UserPage from "../pages/UserPage.vue";
 import UserTeamCreatePage from "../pages/UserTeamCreatePage.vue";
 import UserTeamJoinPage from "../pages/UserTeamJoinPage.vue";
+import UserRegisterPage from "../pages/UserRegisterPage.vue";
 
 const routes = [
     { path: '/', title:"推荐页面", component: Index },
@@ -22,6 +23,7 @@ const routes = [
     { path: '/user/update', title:"用户更新", component: UserUpdatePage },
     { path: '/user/edit', title:"用户编辑", component: UserEditPage },
     { path: '/user/login', title:"用户登录", component: UserLoginPage },
+    { path: '/user/register', title:"用户注册", component: UserRegisterPage },
     { path: '/user/list', title:"搜索结果", component: SearchResult },
     { path: '/user/team/create', title:"用户创建的队伍", component: UserTeamCreatePage },
     { path: '/user/team/join', title:"用户加入的队伍", component: UserTeamJoinPage },

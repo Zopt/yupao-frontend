@@ -6,6 +6,7 @@ import {showFailToast, showSuccessToast} from "vant";
 import {getCurrentUser} from "../service/user.ts";
 
 
+const route = useRoute();
 
 const onSubmit = async () => {
   const currentUsers = await getCurrentUser();
@@ -21,14 +22,16 @@ const onSubmit = async () => {
   // console.log(res,"更新请求");
   if (res.data.code === 0 && res.data.data > 0 ){
     showSuccessToast("修改成功");
-    history.back();
+    // window.location.href =  route.query.?
+    window.location.href =  '/user/update';
+    // history.back();
   }else {
     showFailToast("修改失败")
   }
   // console.log('submit', editUser.value.currentValue);
 };
 
-const route = useRoute();
+
 const editUser = ref({
     editKey: route.query.editKey,
     currentValue: route.query.currentValue,
@@ -56,6 +59,18 @@ const editUser = ref({
       </van-button>
     </div>
   </van-form>
+  <div>
+    {{route.query.editKey}}
+  </div>
+  <div>
+    {{route.query.currentValue}}
+  </div>
+  <div>
+    {{route.query.editName}}
+  </div>
+  <div>
+    {{route.query.redirect}}
+  </div>
 </template>
 
 <style scoped>

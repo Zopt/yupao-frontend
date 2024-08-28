@@ -50,9 +50,7 @@ const onConfirm = ({ selectedValues }) => {
 
 const showPicker = ref(false);
 const minDate = new Date();
-const clearInput = () => {
-  addTeamData.value.password = "";
-};
+
 </script>
 
 <template>
