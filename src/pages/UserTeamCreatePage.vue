@@ -28,7 +28,7 @@ const searchTeam = async (val = '') => {
   }
 }
 
-const onSearch =  (val) => {
+const onSearch =  (val:string) => {
   searchTeam(val)
 };
 const teamList = ref([]);

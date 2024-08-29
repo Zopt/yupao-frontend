@@ -3,7 +3,7 @@ import axios from "axios";
 const isDev = process.env.NODE_ENV === 'development';
 
 const myAxios = axios.create({
-    baseURL: isDev ? 'http://localhost:5432/api' : 'http://yupaobackend.cqinfo.top/api',
+    baseURL: isDev ? 'http://localhost:8080/api' : 'http://yupaobackend.cqinfo.top/api',
     withCredentials:true
 });
 // myAxios.defaults.withCredentials = true //携带请求凭证
